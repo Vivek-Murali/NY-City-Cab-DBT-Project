@@ -1,0 +1,88 @@
+[0m23:15:24.414268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f10f8526010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f10f851fe10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f10f8526190>]}
+
+
+============================== 23:15:24.417693 | 80245296-28c1-4c07-a599-07a265e9f5bc ==============================
+[0m23:15:24.417693 [info ] [MainThread]: Running with dbt=1.7.4
+[0m23:15:24.418384 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/sharpnel/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:15:39.042107 [debug] [MainThread]: Starter project path: /home/sharpnel/.local/lib/python3.11/site-packages/dbt/include/starter_project
+[0m23:15:39.137511 [info ] [MainThread]: 
+Your new dbt project "nycity_cabs" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:15:39.139759 [info ] [MainThread]: Setting up your profile.
+[0m23:15:55.167086 [error] [MainThread]: Encountered an error:
+
+[0m23:15:55.172631 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/sharpnel/.local/lib/python3.11/site-packages/dbt/cli/requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sharpnel/.local/lib/python3.11/site-packages/dbt/cli/requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sharpnel/.local/lib/python3.11/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/sharpnel/.local/lib/python3.11/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/home/sharpnel/.local/lib/python3.11/site-packages/dbt/task/init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/sharpnel/.local/lib/python3.11/site-packages/dbt/task/init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/sharpnel/.local/lib/python3.11/site-packages/dbt/task/init.py", line 165, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sharpnel/.local/lib/python3.11/site-packages/dbt/task/init.py", line 131, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/home/sharpnel/anaconda3/lib/python3.11/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/sharpnel/anaconda3/lib/python3.11/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m23:15:55.173744 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 30.761795, "process_user_time": 1.6938, "process_kernel_time": 0.166262, "process_mem_max_rss": "110368", "process_in_blocks": "64888", "process_out_blocks": "80", "command_success": false}
+[0m23:15:55.174460 [debug] [MainThread]: Command `dbt init` failed at 23:15:55.174279 after 30.76 seconds
+[0m23:15:55.174967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f10f8526610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f10f8526650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f10f851f990>]}
+[0m23:15:55.175394 [debug] [MainThread]: Flushing usage events
+[0m23:16:10.848126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feee0323d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feee0320e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feee0323ed0>]}
+
+
+============================== 23:16:10.865442 | 4dedbf00-7730-496b-8c49-f96577b19a10 ==============================
+[0m23:16:10.865442 [info ] [MainThread]: Running with dbt=1.7.9
+[0m23:16:10.866656 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/sharpnel/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m23:16:24.922181 [debug] [MainThread]: Starter project path: /home/sharpnel/.cache/pypoetry/virtualenvs/dbt-xrCYK5a_-py3.11/lib/python3.11/site-packages/dbt/include/starter_project
+[0m23:16:24.928058 [info ] [MainThread]: 
+Your new dbt project "nycity_cabs_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:16:24.928787 [info ] [MainThread]: Setting up your profile.
+[0m23:16:26.703756 [info ] [MainThread]: Profile nycity_cabs_project written to /home/sharpnel/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m23:16:26.704732 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 15.858709, "process_user_time": 2.422897, "process_kernel_time": 0.115756, "process_mem_max_rss": "123676", "process_out_blocks": "31872", "process_in_blocks": "0"}
+[0m23:16:26.705352 [debug] [MainThread]: Command `dbt init` succeeded at 23:16:26.705195 after 15.86 seconds
+[0m23:16:26.705724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feee44f92d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feee44f9290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feee43b8890>]}
+[0m23:16:26.706112 [debug] [MainThread]: Flushing usage events
